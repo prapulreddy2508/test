@@ -65,7 +65,7 @@ const schema = yup.object({
                 <Typography variant="h4">Welcome!</Typography>
                 <Typography variant="h4" mt={1}>
                   First things first
-                </Typography>
+                </Typography> 
                 Already have an account? <Link>Login</Link>
                 <Grid item my={3}>
                   <TextField
