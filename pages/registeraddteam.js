@@ -34,13 +34,7 @@ const schema = yup.object({
 });
 
 function RegisterAddTeam(props) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
 
   const { handleStepper } = props;
 
@@ -65,18 +59,18 @@ function RegisterAddTeam(props) {
 
               <Grid item my={3}>
                 <TextField
-                 id="fullname"
-                 name="fullname"
-                 label="User Name"
+                  id="fullname"
+                  name="fullname"
+                  label="User Name"
                   variant="outlined"
                   fullWidth
                   required
                   {...register('fullname')}
                   error={errors.fullname ? true : false}
                 />
-                 <Typography variant="inherit" color="textSecondary">
-                {errors.fullname?.message}
-              </Typography>
+                <Typography variant="inherit" color="textSecondary">
+                  {errors.fullname?.message}
+                </Typography>
               </Grid>
 
               <Grid item>
@@ -87,12 +81,12 @@ function RegisterAddTeam(props) {
                   variant="outlined"
                   fullWidth
                   required
-                  // {...register('password')}
-                  // error={errors.password ? true : false}
+                // {...register('password')}
+                // error={errors.password ? true : false}
                 />
-                 <Typography variant="inherit" color="textSecondary">
-                {/* {errors.password?.message} */}
-              </Typography>
+                <Typography variant="inherit" color="textSecondary">
+                  {/* {errors.password?.message} */}
+                </Typography>
               </Grid>
 
               <Grid item my={3}>
@@ -102,14 +96,14 @@ function RegisterAddTeam(props) {
                   name="password"
                   variant="outlined"
                   valid="true"
-                  required 
+                  required
                   fullWidth
-                  // {...register('password')}
-                  // error={errors.password ? true : false}
+                // {...register('password')}
+                // error={errors.password ? true : false}
                 />
                 <Typography variant="inherit" color="textSecondary">
-                {/* {errors.password?.message} */}
-              </Typography>
+                  {/* {errors.password?.message} */}
+                </Typography>
               </Grid>
 
               {/* <Grid item>
@@ -131,10 +125,10 @@ function RegisterAddTeam(props) {
 
               <Grid item align="right" >
                 <Button variant="outlined" >I'll Do This Later</Button>
-                <Button variant="contained"   onClick={handleSubmit(onSubmit)}>
-                 Save & Proceed   
+                <Button variant="contained" onClick={handleSubmit(onSubmit)}>
+                  Save & Proceed
                 </Button>
-              </Grid> 
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

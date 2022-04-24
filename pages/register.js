@@ -2,11 +2,11 @@ import React from "react";
 import Register from "../components/Register";
 import RegisterAddTeam from "../components/RegisterAddTeam";
 import RegisterPage from "../components/RegisterPage";
-import BankDetails from "../components/BankDetails";
+import RegisterBankDetails from "../components/RegisterBankDetails";
 
 function register() {
-  const [stepper, setStepper] = React.useState(2);
-  
+  const [stepper, setStepper] = React.useState(1);
+
 
   const handleStepper = (num) => {
     setStepper(num);
@@ -15,9 +15,10 @@ function register() {
   return (
     <div>
       {stepper == 1 ? <RegisterPage handleStepper={handleStepper} /> : null}
-      
+
       {stepper == 2 ? <RegisterAddTeam handleStepper={handleStepper} /> : null}
-      {stepper == 3 ? <BankDetails handleStepper={handleStepper} /> : null}
+
+      {stepper == 3 ? <RegisterBankDetails handleStepper={handleStepper} /> : null}
     </div>
   );
 }
